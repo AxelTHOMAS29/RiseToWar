@@ -1,0 +1,213 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background-color: #383838;
+	font-family: Raleway, sans-serif;
+}
+
+.content
+{
+	color: #EFEFEF;
+	transition: 1s;
+	padding-left: 5%;
+	padding-right: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1
+{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;
+}
+
+.end
+{
+	padding: 3rem;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+
+
+#end
+{
+	background-color: black;
+	width: 100%;
+	margin-top: 20px;
+}
+
+/*tableau des commandants*/
+
+#commandants_bien
+{
+	background-color: black;
+	border-radius: 10px;
+	border: 7px solid black;
+	display: flex;
+	flex-direction: column;
+	width: 99%;
+	margin: 2rem;
+}
+
+.commandant
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #383838;
+	width: 99%;
+	margin: 0.5rem;
+	border-radius: 10px;
+}
+
+.image_texte
+{
+	display: flex;
+	width: 90%;
+	align-items: center;
+	border-radius: 10px;
+}
+
+
+
+.heros
+{
+	height: 150px;
+	min-width: 150px;
+	max-width: 150px;
+	object-fit: cover;
+	object-position: top;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.description
+{
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+}
+
+.rang
+{
+	padding-right: 1rem;
+}
+
+
+
+/*side bar*/
+
+#side-bar
+{
+	position: fixed;
+	width: 300px;
+	height: auto;
+	background-color: #EFEFEF;
+	left: -300px;
+	transition: .5s ease-out;
+	z-index: 4;
+	border-bottom-right-radius: 20px;
+}
+
+.toggle-button
+{
+	position: absolute;
+	top: 30px;
+	left: 310px;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+}
+
+.toggle-button span
+{
+	width: 60px;
+	height: 10px;
+	border-radius: 5px;
+	background: #EFEFEF;
+	display: block;
+	margin-top: 4px;
+	transition: .5s ease; 
+}
+
+li
+{
+	color: #292929;
+	list-style-type: none;
+	font-size: 2.5rem;
+	padding: 5px;
+}
+
+li:hover
+{
+	background: #292929;
+	color: #FCFCFB;
+}
+
+#side-bar.active
+{
+	left: 0;
+}
+
+#side-bar.active .toggle-button
+{
+	top: 2.8rem;
+	left: 310px;
+}
+
+#side-bar.active span
+{
+	position: absolute;
+}
+
+#side-bar.active span:nth-child(1)
+{
+	transform: rotate(45deg);
+}
+
+#side-bar.active span:nth-child(2)
+{
+	opacity: 0;
+}
+
+#side-bar.active span:nth-child(3)
+{
+	transform: rotate(-45deg);
+}
+
+#side-bar.active ~ .content 
+{
+	opacity: 0.3; 
+}
+
+
+/*filtre*/
+
+#groupeFiltre
+{
+	margin-top: 20px;
+	margin-left: 50%;
+	width: 35%;
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.filtre
+{
+	background-color:  #EFEFEF;
+	border-radius: 10px;
+	cursor: pointer;
+}
+

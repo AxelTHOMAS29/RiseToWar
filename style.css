@@ -1,0 +1,221 @@
+
+
+/*# sourceMappingURL=style.css.map */
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background-color: #383838;
+	font-family: Raleway, sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: none;
+}
+
+.content
+{
+	color: #EFEFEF;
+	transition: 1s;
+	display: flex;
+	padding-left: 5%;
+	padding-right: 5%;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1
+{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;
+}
+
+p
+{
+	padding: 3rem;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.paragraphe2
+{
+	padding: 1rem;
+}
+
+.RTW_IMG
+{
+	height: 250px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.S3_IMG
+{
+	height: 600px;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 10px;
+}
+
+.hero_s2
+{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding-bottom: 1rem;
+}
+
+.heros
+{
+	height: 400px;
+	width: 30%;
+	border-radius: 10px;
+	object-fit: cover;
+	object-position: top;
+}
+
+#end
+{
+	background-color: black;
+	width: 100%;
+	padding-top: 10px;
+}
+
+
+/*side bar*/
+
+#side-bar
+{
+	position: fixed;
+	width: 300px;
+	height: auto;
+	background-color: #EFEFEF;
+	left: -300px;
+	transition: .5s ease-out;
+	z-index: 4;
+	border-bottom-right-radius: 20px;
+}
+
+.toggle-button
+{
+	position: absolute;
+	top: 30px;
+	left: 310px;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+}
+
+.toggle-button span
+{
+	width: 60px;
+	height: 10px;
+	border-radius: 5px;
+	background: #EFEFEF;
+	display: block;
+	margin-top: 4px;
+	transition: .5s ease; 
+}
+
+li
+{
+	color: #292929;
+	list-style-type: none;
+	font-size: 2.5rem;
+	padding: 5px;
+}
+
+li:hover
+{
+	background: #292929;
+	color: #FCFCFB;
+}
+
+#side-bar.active
+{
+	left: 0;
+}
+
+#side-bar.active .toggle-button
+{
+	top: 2.8rem;
+	left: 310px;
+}
+
+#side-bar.active span
+{
+	position: absolute;
+}
+
+#side-bar.active span:nth-child(1)
+{
+	transform: rotate(45deg);
+}
+
+#side-bar.active span:nth-child(2)
+{
+	opacity: 0;
+}
+
+#side-bar.active span:nth-child(3)
+{
+	transform: rotate(-45deg);
+}
+
+#side-bar.active ~ .content 
+{
+	opacity: 0.3; 
+}
+
+.fa-snowflake {
+	color: white;
+	position: absolute;
+	top: -20px;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+	to {
+		transform: translateY(300vh);
+	}
+}
+
+
+#target {
+  display: flex;
+  text-align: left;
+  animation: color 30s alternate infinite;
+  perspective: 200px;
+  transform: translateX(26px);
+  width: 500px;
+}
+.word {
+  position: absolute;
+}
+@keyframes color {
+  0% {color: white;}
+  50% {color: red;}
+  100% {color: white;}
+}
+.letter {
+  transform: translateZ(200px);
+}
+@keyframes anim {
+  25% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+    transform: translateZ(-280px) translateX(200px);
+  }
+}

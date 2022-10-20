@@ -1,0 +1,216 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background-color: #383838;
+	font-family: Raleway, sans-serif;
+}
+
+.content
+{
+	color: #EFEFEF;
+	transition: 1s;
+	display: flex;
+	padding-left: 5%;
+	padding-right: 5%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.titre {
+	background-image: url(./images/sam-frodon.webp);
+	background-attachment: fixed;
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-radius: 20px;
+	opacity: 0.8;
+	margin-bottom: 30px;
+}
+
+.titrePvP {
+	background-image: url(./images/minas-tirith.jpg);
+	background-attachment: fixed;
+	background-position: top;
+	background-size: cover;
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-radius: 20px;
+	opacity: 0.8;
+	margin-bottom: 30px;
+}
+
+
+h1
+{
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;
+    margin-bottom: 40px;
+    color: #EFEFEF;
+	opacity: 2;
+}
+
+h2 
+{
+    margin-bottom: 10px;
+    text-decoration: underline;
+	opacity: 1;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.debut
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.debutTexte
+{
+    padding: 0.5rem;
+}
+
+.pvp
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.pvpTexte {
+	padding: 0.5rem;
+}
+
+#end
+{
+	background-color: black;
+	width: 100%;
+	margin-top: 20px;
+    padding-top: 50px;
+	bottom: 0;
+}
+
+
+/*images*/
+
+.minas {
+    height: 300px;
+    width: 80%;
+    object-fit: cover;
+}
+
+
+/*side bar*/
+
+#side-bar
+{
+	position: fixed;
+	width: 300px;
+	height: auto;
+	background-color: #EFEFEF;
+	left: -300px;
+	transition: .5s ease-out;
+	z-index: 4;
+	border-bottom-right-radius: 20px;
+}
+
+.toggle-button
+{
+	position: absolute;
+	top: 30px;
+	left: 310px;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+}
+
+.toggle-button span
+{
+	width: 60px;
+	height: 10px;
+	border-radius: 5px;
+	background: #EFEFEF;
+	display: block;
+	margin-top: 4px;
+	transition: .5s ease; 
+}
+
+li
+{
+	color: #292929;
+	list-style-type: none;
+	font-size: 2.5rem;
+	padding: 5px;
+}
+
+li:hover
+{
+	background: #292929;
+	color: #FCFCFB;
+}
+
+#side-bar.active
+{
+	left: 0;
+}
+
+#side-bar.active .toggle-button
+{
+	top: 2.8rem;
+	left: 310px;
+}
+
+#side-bar.active span
+{
+	position: absolute;
+}
+
+#side-bar.active span:nth-child(1)
+{
+	transform: rotate(45deg);
+}
+
+#side-bar.active span:nth-child(2)
+{
+	opacity: 0;
+}
+
+#side-bar.active span:nth-child(3)
+{
+	transform: rotate(-45deg);
+}
+
+#side-bar.active ~ .content 
+{
+	opacity: 0.3; 
+}
+
+@media all and (max-width: 500px){
+	h1, h2 {
+		font-size: 100%;
+	}
+
+	.titre{
+		justify-content: center;
+		align-items: center;
+	}
+}
